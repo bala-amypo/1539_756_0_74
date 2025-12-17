@@ -8,7 +8,7 @@ import com.example.demo.entity.LocationEntity;
 @Service
 public class LocationServiceimp implements LocationService{
     @Autowired
-    LocationRepository LocationRepo;
+    private LocationRepository LocationRepo;
     @Override
     public LocationEntity createlocation(LocationEntity le){
         return LocationRepo.save(le);
