@@ -13,12 +13,10 @@ public class LocationServiceimp implements LocationService{
     public LocationEntity createlocation(LocationEntity le){
         return LocationRepo.save(le);
     }
+    @Override
     public List<LocationEntity> getLL(){
         return LocationRepo.findAll();
     }
-    @Override
-    public List<LocationEntity> getallLocation() {
-        throw new UnsupportedOperationException("Unimplemented method 'getallLocation'");
-    }
+
 
 }
