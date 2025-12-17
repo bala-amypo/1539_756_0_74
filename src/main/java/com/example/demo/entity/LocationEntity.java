@@ -1,5 +1,4 @@
 package com.example.demo.entity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,6 +12,14 @@ public class LocationEntity {
     private String name;
     private Double latitude;
     private Double longitude;
+    public LocationEntity(Long id, String name, Double latitude, Double longitude) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+    public LocationEntity() {
+    }
     public Long getId() {
         return id;
     }
@@ -37,13 +44,7 @@ public class LocationEntity {
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
-    public LocationEntity() {
-    }
-    public LocationEntity(Long id, String name, Double latitude, Double longitude) {
-        this.id = id;
-        this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
 
+
+    
 }
