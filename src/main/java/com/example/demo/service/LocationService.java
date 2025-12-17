@@ -1,12 +1,9 @@
-package com.example.demo.service;
+package com.example.demo.repository;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.entity.LocationEntity;
 
-public interface LocationService {
-    LocationEntity createlocation(LocationEntity location);
-    List<LocationEntity> getallLocation();
-    
+public interface LocationRepository extends JpaRepository<LocationEntity,Long>{
     
 }
