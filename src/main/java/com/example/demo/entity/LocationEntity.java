@@ -1,15 +1,24 @@
 package com.example.demo.entity;
 
-import net.bytebuddy.build.HashCodeAndEqualsPlugin.Identity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class LocationEntity {
+
     @Id
-    @GeneratedValue(strategy=GeneratedType.Identity)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private Double latitude;
     private Double longitude;
+
+    public LocationEntity() {
+    }
+
     public LocationEntity(Long id, String name, Double latitude, Double longitude) {
         this.id = id;
         this.name = name;
@@ -48,10 +57,4 @@ public class LocationEntity {
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
-    
-    public LocationEntity() {
-    }
-
-
-    
 }
